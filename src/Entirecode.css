@@ -1,0 +1,122 @@
+.Entirecode .container {
+  border: 0.1cm solid rgb(0, 110, 197);
+  width: 800px;
+  height: 500px;
+}
+
+.Entirecode .iconSection {
+  position: relative;
+  bottom: -10.325px;
+  right: -2.325px;
+  width: 0.5cm;
+  padding: 0;
+}
+
+.Entirecode .active {
+  cursor: default;
+}
+
+.Entirecode .card i {
+  color: #ffe88d;
+}
+
+.Entirecode .main_icon {
+  color: black;
+  font-size: 100px;
+  bottom: 50px;
+  left: 10px;
+  position: relative;
+}
+
+.Entirecode .currentTemp {
+  color: rgb(171, 71, 188);
+  font-size: 80px;
+  bottom: 110px;
+  left: 50px;
+  position: relative;
+}
+
+.Entirecode .summary {
+  font: weight 100;
+  color: rgb(0, 110, 197);
+  margin-bottom: 0;
+  bottom: 0.95cm;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.Entirecode .misc {
+  position: relative;
+  /**/
+  float: right;
+  right: 100px;
+  color: rgb(0, 110, 197);
+  bottom: 6.85cm;
+  right: 4.85cm;
+  margin: 0;
+}
+
+.Entirecode .recent {
+  position: relative;
+  float: right;
+  display: block;
+  color: rgb(171, 71, 188);
+  background-color: rgb(246, 236, 248);
+  bottom: 2.95cm;
+  right: 1.95cm;
+  margin-bottom: 0;
+}
+
+.Entirecode .current-form {
+  width: 10cm;
+  position: relative;
+  left: 500px;
+  bottom: 135px;
+}
+
+.Entirecode .row {
+  /*padding: 0 0 0 15%;*/
+  margin: 0 auto;
+  position: relative;
+  bottom: 250px;
+  border: 0.5px dashed rgb(0, 110, 197);
+  height: 110px;
+}
+
+.Entirecode .col-2 {
+  text-align: center;
+  display: block;
+  color: rgb(0, 110, 197);
+  font-size: 15px;
+  bottom: -10px;
+  /**/
+}
+
+.Entirecode .card-text1 {
+  color: rgb(171, 71, 188);
+  font-size: 15px;
+}
+
+.Entirecode .card {
+  text-align: center;
+  display: block;
+  position: relative;
+  border: 0.01cm solid #60a4db;
+  border-radius: 510px;
+  padding: 10px 0;
+  margin: 2px auto;
+}
+
+.Entirecode .weatherUpdate,
+.weatherUpdateDt {
+  color: rgb(171, 71, 188);
+  position: relative;
+  left: 1px;
+  bottom: 230px;
+}
+
+.Entirecode p.endLink {
+  position: relative;
+  text-align: center;
+  left: 230px;
+}

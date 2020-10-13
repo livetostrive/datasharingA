@@ -1,0 +1,38 @@
+body {
+  font-family: arial, sans-serif;
+  padding: 30px;
+  margin: 10px auto;
+}
+
+img {
+  display: block;
+  /*margin-bottom: 0;
+  position: absolute;*/
+}
+
+form {
+  width: 10cm;
+  /*border: 0.05cm solid rgb(0, 110, 197);*/
+  padding: 3px;
+  margin: 20px 16px;
+  font-size: 0.58cm;
+  color: rgb(0, 110, 197);
+  position: relative;
+  left: 25px;
+  bottom: 70px;
+  margin-bottom: 0;
+}
+
+h4 {
+  margin: 40px;
+  bottom: 100px;
+  position: relative;
+  margin-bottom: 0;
+}
+
+h1 {
+  margin: 40px;
+  bottom: 70px;
+  position: relative;
+  margin-bottom: 0;
+}
