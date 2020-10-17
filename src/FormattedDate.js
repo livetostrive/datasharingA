@@ -1,6 +1,6 @@
 import React from "react";
-export default function FormattedDate(timestamp) {
-        let date = new Date(timestamp);
+export default function FormattedDate(props) {
+        let date = new Date(props);
 
         let days = [
           "Sunday",
@@ -12,11 +12,11 @@ export default function FormattedDate(timestamp) {
           "Saturday",
         ];
         let day = days[date.getDay()];
-        return `${day} ${formatHours(timestamp)}`;
+        return `${day} ${formatHours(props)}`;
       }
       //////////////////////
-      function formatHours(timestamp) {
-        let date = new Date(timestamp);
+      function formatHours(props) {
+        let date = new Date(props);
         let hours = date.getHours();
         if (hours === 0) {
           hours = 12;
