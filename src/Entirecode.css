@@ -107,14 +107,6 @@
   margin: 2px auto;
 }
 
-.Entirecode .weatherUpdate,
-.weatherUpdateDt {
-  color: rgb(171, 71, 188);
-  position: relative;
-  left: 1px;
-  bottom: 230px;
-}
-
 .Entirecode p.endLink {
   position: relative;
   text-align: center;

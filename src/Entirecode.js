@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Entirecode.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate.js";
-import { getAllByPlaceholderText } from "@testing-library/react";
 
 export default function Entirecode(props) {
   let [city, setCity] = useState(props.city);
@@ -21,7 +20,6 @@ export default function Entirecode(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       updatetime: response.data.dt * 1000,
-      todaydate: getdate(),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
@@ -95,7 +93,7 @@ export default function Entirecode(props) {
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
-              <span className="currentTime"></span> <FormattedDate todaydate={weather.todaydate} /> <br />
+              <span className="currentTime"></span> <FormattedDate updatetime={weather.updatetime} /> <br />
               <span className="currentDescription">{weather.description}</span>
             </h4>
           </div>
@@ -133,9 +131,6 @@ export default function Entirecode(props) {
           <footer>
             <div className="row"></div>
           </footer>
-
-          <span className="weatherUpdate">Last Updated Date:</span>
-          <span className="weatherUpdateDt"><FormattedDate updatetime={weather.updatetime} /></span>
         </div>
 
         <p className="endLink">
