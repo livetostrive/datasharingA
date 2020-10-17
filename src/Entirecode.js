@@ -90,7 +90,7 @@ export default function Entirecode(props) {
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
-              <span className="currentTime"></span> <FormattedDate updatetime={weather.updatetime} /> <br />
+              <span className="currentTime"></span> <FormattedDate date={weather.updatetime} /> <br />
               <span className="currentDescription">{weather.description}</span>
             </h4>
           </div>
@@ -140,16 +140,16 @@ export default function Entirecode(props) {
           >
             Marlude Pierre-Loius
           </a>
-          and is open-sourced on
+          and is open-sourced on { }
           <a
             href="https://github.com/livetostrive/datascience"
             id="myGitHub"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub
+            . GitHub
           </a>
-          and hosted on
+          and hosted on { }
           <a
             href="https://www.netlify.com/"
             id="Netlify"
