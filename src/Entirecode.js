@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Entirecode.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Entirecode(props) {
   let [city, setCity] = useState(props.city);
@@ -18,6 +19,8 @@ export default function Entirecode(props) {
       temp: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
+      updateTime: new date(response.data.dt * 1000),
+      TodayDate: new date(),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
@@ -91,7 +94,7 @@ export default function Entirecode(props) {
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
-              <span className="currentTime"></span> {weather.date} <br />
+              <span className="currentTime"></span> <FormattedDate date={weather.TodayDate} /> <br />
               <span className="currentDescription">{weather.description}</span>
             </h4>
           </div>
@@ -131,7 +134,7 @@ export default function Entirecode(props) {
           </footer>
 
           <span className="weatherUpdate">Last Updated Date:</span>
-          <span className="weatherUpdateDt">{weather.updateTime}</span>
+          <span className="weatherUpdateDt"><FormattedDate date={weather.updateTime} /></span>
         </div>
 
         <p className="endLink">
