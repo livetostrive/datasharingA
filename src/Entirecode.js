@@ -94,7 +94,7 @@ export default function Entirecode(props) {
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
-              <span className="currentTime"></span> <FormattedDate date={weather.todaydate} /> <br />
+              <span className="currentTime"></span> <FormattedDate todaydate={weather.todaydate} /> <br />
               <span className="currentDescription">{weather.description}</span>
             </h4>
           </div>
@@ -134,7 +134,7 @@ export default function Entirecode(props) {
           </footer>
 
           <span className="weatherUpdate">Last Updated Date:</span>
-          <span className="weatherUpdateDt"><FormattedDate date={weather.updatetime} /></span>
+          <span className="weatherUpdateDt"><FormattedDate updatetime={weather.updatetime} /></span>
         </div>
 
         <p className="endLink">
