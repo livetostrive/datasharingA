@@ -64,9 +64,6 @@ export default function Entirecode(props) {
             />
             <input type="submit" value="search" />
           </form>
-          <form className="current-form">
-            <input type="submit" value="Current Location" />
-          </form>
           <span className="recent">
             <h5>
               <em>
