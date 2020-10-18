@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FormattedDate(props) {
 
         let sevendays = [
@@ -29,7 +27,7 @@ export default function FormattedDate(props) {
                 if (hours < 12 && hours >= 10) {
                   hours = hours;
                 } else {
-                  hours = props.date.getHours();
+                  let hours = props.date.getHours();
                 }
               }
             }
