@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Entirecode.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate.js";
+//import FormattedDate from "./FormattedDate.js";
 
 export default function Entirecode(props) {
   let [city, setCity] = useState(props.city);
@@ -90,7 +90,7 @@ export default function Entirecode(props) {
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
-              <span className="currentTime"></span> <FormattedDate date={weather.updatetime} /> <br />
+              <span className="currentTime"></span> {weather.updatetime} <br />
               <span className="currentDescription">{weather.description}</span>
             </h4>
           </div>
