@@ -45,5 +45,5 @@ export default function FormattedDate(props) {
           Time = "AM";
         }
 
-        return `${day} ${hours}:${minutes} ${Time} `;
+        return <div>{day} {hours}:{minutes} {Time} </div>;
       }

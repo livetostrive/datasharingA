@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Entirecode.css";
-import axios from "axios";
 import FormattedDate from "./FormattedDate.js";
+import axios from "axios";
+import "./Entirecode.css";
+
 
 export default function Entirecode(props) {
   let [city, setCity] = useState(props.city);
