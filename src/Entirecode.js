@@ -20,7 +20,7 @@ export default function Entirecode(props) {
       temp: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      updatetime: new date(response.data.dt * 1000),
+      updatetime: response.data.dt * 1000,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
@@ -91,7 +91,7 @@ export default function Entirecode(props) {
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
-              <span className="currentTime"></span> <FormattedDate date={weather.updatetime}/> <br />
+              <span className="currentTime"></span> <FormattedDate date={new date(weather.updatetime)}/> <br />
               <span className="currentDescription">{weather.description}</span>
             </h4>
           </div>
