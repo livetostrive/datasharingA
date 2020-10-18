@@ -1,6 +1,6 @@
 import React from "react";
 export default function FormattedDate(props) {
-	  let date = new Date()
+	  let date = new Date(props)
 
         let sevendays = [
           "Sunday",
