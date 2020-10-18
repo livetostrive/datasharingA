@@ -1,7 +1,9 @@
+// eslint-disable-next-line
 import React from "react";
 
+
 export default function FormattedDate(props) {
-  
+ let date = new Date(props);
   let sevendays = [
     "Sunday",
     "Monday",
@@ -11,9 +13,9 @@ export default function FormattedDate(props) {
     "Friday",
     "Saturday",
   ];
-  let day = sevendays[props.date.getDay()];
+  let day = sevendays[date.getDay()];
   
-  let hours = props.date.getHours();
+  let hours = date.getHours();
   if (hours === 0) {
     hours = 12;
   } else {
@@ -27,23 +29,23 @@ export default function FormattedDate(props) {
           hours = `0${hours}`;
         } else {
           if (hours < 12 && hours >= 10) {
-            props.date.getHours();
+            date.getHours();
           }
         }
       }
     }
   }
-        let minutes = props.date.getMinutes();
+        let minutes = date.getMinutes();
         if (minutes < 10) {
           minutes = `0${minutes}`;
         }
 
-        let Time = props.date.getHours();
+        let Time = date.getHours();
         if (Time >= 12) {
           Time = "PM";
         } else {
           Time = "AM";
         }
 
-        return <div>{day} {hours}:{minutes} {Time} </div>;
+        return  `${day} ${hours}:${minutes} ${Time}`;
       }
