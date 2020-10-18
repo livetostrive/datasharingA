@@ -24,9 +24,9 @@ export default function FormattedDate(props) {
         if (hours < 12 && hours < 10) {
           hours = `0${hours}`;
         } else {
-         if (hours < 12 && hours >= 10) {
-           hours;
-                }  
+          if (hours < 12 && hours >= 10) {
+            props.date.getHours();
+          }
         }
       }
     }
