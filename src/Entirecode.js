@@ -17,9 +17,9 @@ export default function Entirecode(props) {
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
-      temp: response.data.main.temp,
-      wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
+      temp: Math.round(response.data.main.temp),
+      wind: Math.round(response.data.wind.speed),
+      humidity: Math.round(response.data.main.humidity),
       date: response.data.dt * 1000,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
@@ -108,7 +108,7 @@ export default function Entirecode(props) {
             <p className="maintemp">
               <em>
                 <span className="currentTemp">
-                  {Math.round(weather.temp)}°C
+                  {weather.temp}°C
                 </span>
               </em>
             </p>
