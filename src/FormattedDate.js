@@ -1,37 +1,35 @@
 export default function FormattedDate(props) {
 
-        let sevendays = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
+  let sevendays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
-        let day = sevendays[props.date.getDay()];
+  let day = sevendays[props.date.getDay()];
   
-        let hours = props.date.getHours();
-        if (hours === 0) {
-          hours = 12;
+  let hours = props.date.getHours();
+  if (hours === 0) {
+    hours = 12;
+  } else {
+    if (hours > 12 && hours - 12 < 10) {
+      hours = `0${hours - 12}`;
+    } else {
+      if (hours > 12 && hours - 12 >= 10) {
+        hours = hours - 12;
+      } else {
+        if (hours < 12 && hours < 10) {
+          hours = `0${hours}`;
         } else {
-          if (hours > 12 && hours - 12 < 10) {
-            hours = `0${hours - 12}`;
-          } else {
-            if (hours > 12 && hours - 12 >= 10) {
-              hours = hours - 12;
-            } else {
-              if (hours < 12 && hours < 10) {
-                hours = `0${hours}`;
-              } else {
-                if (hours < 12 && hours >= 10) {
-                  hours;
-                } 
-              }
-            }
-          }
+          hours;
+                
         }
-
+      }
+    }
+  }
         let minutes = props.date.getMinutes();
         if (minutes < 10) {
           minutes = `0${minutes}`;
