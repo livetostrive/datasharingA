@@ -6,8 +6,8 @@
 
 .Entirecode .iconSection {
   position: relative;
-  bottom: -10.325px;
-  right: -2.325px;
+  bottom: 380px;
+  right: 30px;
   width: 0.5cm;
   padding: 0;
 }
@@ -39,7 +39,7 @@
 .Entirecode .summary {
   font: weight 100;
   color: rgb(0, 110, 197);
-  bottom: 0.95cm;
+  bottom: 0cm;
   position: relative;
   text-transform: capitalize;
   padding: 50px;
@@ -56,11 +56,11 @@
   margin: 0;
 }
 
-.Entirecode .current-form {
+.Entirecode .text-form {
   width: 10cm;
   position: relative;
-  left: 500px;
-  bottom: 135px;
+  left: 200px;
+  top: 0px;
 }
 
 .Entirecode .row {

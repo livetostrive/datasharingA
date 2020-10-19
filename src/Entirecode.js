@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
-import fahrenheit_off from "./fahrenheit_off.jpg";
-import celcius_on from "./celcius_on.jpg";
+import WeatherTemperature from "./WeatherTemperature.js";
 import "./Entirecode.css";
 
 
@@ -39,26 +38,11 @@ export default function Entirecode(props) {
     return (
       <div className="Entirecode">
         <div className="container">
-          <section className="iconSection">
-            <a href="/" id="cel" className="notactive">
-              <img id="CelPic"
-                src={celcius_on}
-                alt="CelciusIconOff"
-                width="35" />
-            </a>
-            <a href="/" id="fah" className="active">
-              <img
-                id="FahPic"
-                src={fahrenheit_off}
-                alt="FahrenheitIconOn"
-                width="36"
-              />
-            </a>
-          </section>
-          <form id="text-form" onSubmit={handleSubmit}>
+
+          <form className="text-form" onSubmit={handleSubmit}>
             <input
               type="search"
-              id="text-input"
+              className="text-input"
               placeholder="Enter a city"
               autoComplete="off"
               onChange={citySearched}
@@ -76,7 +60,7 @@ export default function Entirecode(props) {
           </div>
 
           <h1>
-<div className="main_icon">
+            <div className="main_icon">
               <img
                 className="MainIcon_Yes"
                 src={weather.icon}
@@ -86,9 +70,7 @@ export default function Entirecode(props) {
             </div>
             <p className="maintemp">
               <em>
-                <span className="currentTemp">
-                  {weather.temp}°C
-                </span>
+               <WeatherTemperature celsius={weather.temp} />
               </em>
             </p>
           </h1>
@@ -102,7 +84,6 @@ export default function Entirecode(props) {
               <br />
             </h5>
           </div>
-          <br />
           <br />
           <br />
           <footer>
