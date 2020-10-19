@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
+import fahrenheit_off from "./fahrenheit_off.jpg";
+import celcius_on from "./celcius_on.jpg";
 import "./Entirecode.css";
 
 
@@ -39,17 +41,15 @@ export default function Entirecode(props) {
         <div className="container">
           <section className="iconSection">
             <a href="/" id="cel" className="notactive">
-              <img
-                id="CelPic"
-                src="./celcius_on.jpg"
+              <img id="CelPic"
+                src={celcius_on}
                 alt="CelciusIconOff"
-                width="35"
-              />
+                width="35" />
             </a>
             <a href="/" id="fah" className="active">
               <img
                 id="FahPic"
-                src="fahrenheit_off.jpg"
+                src={fahrenheit_off}
                 alt="FahrenheitIconOn"
                 width="36"
               />
@@ -65,29 +65,8 @@ export default function Entirecode(props) {
             />
             <input type="submit" value="search" />
           </form>
-          <span className="recent">
-            <h5>
-              <em>
-                <strong>Most Recent (Current Temp): </strong> <br />
-                <span className="recentCity">Lauderhill, FL</span> &nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="recentCityTemp">20°C</span>
-                <br />
-                <span className="recentCity">Washington, D.C</span>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="recentCityTemp">18°C</span>
-                <br />
-                <span className="recentCity">San Diego, CA</span> &nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="recentCityTemp">15°C</span>
-                <br />
-                <span className="recentCity">Tampa, FL</span> &nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="recentCityTemp">19°C</span>
-              </em>
-            </h5>
-          </span>
+          
+
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
@@ -97,7 +76,7 @@ export default function Entirecode(props) {
           </div>
 
           <h1>
-            <div className="main_icon">
+<div className="main_icon">
               <img
                 className="MainIcon_Yes"
                 src={weather.icon}
@@ -139,7 +118,7 @@ export default function Entirecode(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Marlude Pierre-Loius
+            { } Marlude Pierre-Loius { }
           </a>
           and is open-sourced on { }
           <a
@@ -147,8 +126,7 @@ export default function Entirecode(props) {
             id="myGitHub"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            . GitHub
+          > GitHub { }
           </a>
           and hosted on { }
           <a

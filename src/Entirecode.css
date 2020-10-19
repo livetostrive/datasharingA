@@ -39,10 +39,10 @@
 .Entirecode .summary {
   font: weight 100;
   color: rgb(0, 110, 197);
-  margin-bottom: 0;
   bottom: 0.95cm;
   position: relative;
   text-transform: capitalize;
+  padding: 50px;
 }
 
 .Entirecode .misc {
@@ -54,17 +54,6 @@
   bottom: 6.85cm;
   right: 4.85cm;
   margin: 0;
-}
-
-.Entirecode .recent {
-  position: relative;
-  float: right;
-  display: block;
-  color: rgb(171, 71, 188);
-  background-color: rgb(246, 236, 248);
-  bottom: 2.95cm;
-  right: 1.95cm;
-  margin-bottom: 0;
 }
 
 .Entirecode .current-form {
@@ -110,5 +99,5 @@
 .Entirecode p.endLink {
   position: relative;
   text-align: center;
-  left: 230px;
+  left: 10px;
 }
