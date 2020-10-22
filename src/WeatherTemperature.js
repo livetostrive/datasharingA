@@ -24,13 +24,13 @@ export default function WeatherTemperature(props) {
         <span className="currentTemp"> {props.celsius}°C </span>
                 
          <section className="iconSection">
-            <a href="/" onClick={showFahrenheit} id="cel" className="active">
+            <a href="/" onClick={showCelsius} id="cel" className="active">
             <img className="CelPic"
                 src={celcius_on}
                 alt="CelciusIconOff"
                 width="35" />
             </a>
-            <a href="/" onClick={showCelsius}  id="fah" className="notactive">
+            <a href="/" onClick={showFahrenheit}  id="fah" className="notactive">
               <img
                 className="FahPic"
                 src={fahrenheit_off}
@@ -47,13 +47,13 @@ export default function WeatherTemperature(props) {
         <span className="currentTemp"> {Math.round((props.celsius * 9) / 5 + 32)}°F </span>
                 
          <section className="iconSection">
-            <a href="/" onClick={showFahrenheit} id="cel" className="notactive">
+            <a href="/" onClick={showCelsius} id="cel" className="notactive">
               <img className="CelPic"
                 src={celcius_off}
                 alt="CelciusIconOn"
                 width="35" />
             </a>
-            <a href="/" onClick={showCelsius} id="fah" className="active">
+            <a href="/" onClick={showFahrenheit} id="fah" className="active">
               <img
               className="FahPic"
                 src={fahrenheit_on}
