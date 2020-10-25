@@ -31,15 +31,26 @@
 .Entirecode .currentTemp {
   color: rgb(171, 71, 188);
   font-size: 80px;
-  bottom: 110px;
+  bottom: 80px;
   left: 50px;
   position: relative;
+}
+
+.recent {
+  position: relative;
+  float: right;
+  display: block;
+  color: rgb(171, 71, 188);
+  background-color: rgb(246, 236, 248);
+  bottom: .75cm;
+  right: .75cm;
+  margin-bottom: 0;
 }
 
 .Entirecode .summary {
   font: weight 100;
   color: rgb(0, 110, 197);
-  bottom: 0cm;
+  bottom: -40px;
   position: relative;
   text-transform: capitalize;
   padding: 50px;
@@ -47,20 +58,19 @@
 
 .Entirecode .misc {
   position: relative;
-  /**/
   float: right;
   right: 100px;
   color: rgb(0, 110, 197);
-  bottom: 6.85cm;
-  right: 4.85cm;
+  top: -8.3cm;
+  right: 4cm;
   margin: 0;
 }
 
 .Entirecode .text-form {
   width: 10cm;
   position: relative;
-  left: 200px;
-  top: 0px;
+  left: 45px;
+  top: 10px;
 }
 
 .Entirecode .row {
@@ -68,6 +78,7 @@
   margin: 0 auto;
   position: relative;
   bottom: 250px;
+  left: 60px;
   border: 0.5px dashed rgb(0, 110, 197);
   height: 110px;
 }
@@ -78,6 +89,7 @@
   color: rgb(0, 110, 197);
   font-size: 15px;
   bottom: -10px;
+  left: 50px
   /**/
 }
 

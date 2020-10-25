@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
 import WeatherTemperature from "./WeatherTemperature.js";
+import WeatherForecast from "./WeatherForecast";
 import "./Entirecode.css";
 
 
@@ -24,13 +25,14 @@ export default function Entirecode(props) {
       date: response.data.dt * 1000,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
+      city: response.data.name,
     });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     setdisplayCity(`${city}`);
-    let apiKey = "094780c710fa4efd669f0df8c3991927";
+    let apiKey = "3783047c04cbb1fbfe632061ff9aafcd";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
@@ -50,7 +52,33 @@ export default function Entirecode(props) {
             <input type="submit" value="search" />
           </form>
           
-
+      <span class="recent">
+        <h5>
+          <em
+            ><strong>Most Recent (Current Temp): </strong> <br />
+            <span class="recentCityOne">Lauderhill, FL</span> &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+              class="recentCityTempOne"
+              >20°C</span
+            >
+            <br />
+            <span class="recentCityTwo">Washington, D.C</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="recentCityTempTwo"
+              >18°C</span
+            ><br />
+            <span class="recentCityThree">San Diego, CA</span> &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="recentCityTempThree"
+              >15°C</span
+            ><br />
+            <span class="recentCityFour">Tampa, FL</span> &nbsp; &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+              class="recentCityTempFour"
+              >19°C</span
+            >
+          </em>
+        </h5>
+        </span>
+          
           <div className="summary">
             <h4>
               <span className="searchCity"> {displayCity}</span> <br />
@@ -87,7 +115,7 @@ export default function Entirecode(props) {
           <br />
           <br />
           <footer>
-            <div className="row"></div>
+              <WeatherForecast city={weather.city}/> 
           </footer>
         </div>
 
@@ -111,7 +139,7 @@ export default function Entirecode(props) {
           </a>
           and hosted on { }
           <a
-            href="https://www.netlify.com/"
+            href="https://confident-pare-933c51.netlify.app/"
             id="Netlify"
             target="_blank"
             rel="noopener noreferrer"
@@ -123,10 +151,10 @@ export default function Entirecode(props) {
     );
   } else {
     return (
-      <form id="text-form" onSubmit={handleSubmit}>
+      <form className ="text-form" onSubmit={handleSubmit}>
         <input
           type="search"
-          id="text-input"
+          className ="text-input"
           placeholder="Enter a city"
           autoComplete="off"
           onChange={citySearched}
